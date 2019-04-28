@@ -66,12 +66,6 @@ public class ConnectToSqlDB {
         return list;
     }
 
-    public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
-        List<User> list = readUserProfileFromSqlTable();
-        for (User user : list) {
-            System.out.println(user.getStName() + " " + user.getStID() + " " + user.getStDOB());
-        }
-    }
 
     public List<String> readDataBase(String tableName, String columnName) throws Exception {
         List<String> data = new ArrayList<String>();
@@ -206,4 +200,12 @@ public class ConnectToSqlDB {
             e.printStackTrace();
         }
     }
+
+    public static void main(String[] args) throws IOException, SQLException, ClassNotFoundException {
+        List<User> list = readUserProfileFromSqlTable();
+        for (User user : list) {
+            System.out.println(user.getStName() + " " + user.getStID() + " " + user.getStDOB());
+        }
+    }
+
 }
